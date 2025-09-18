@@ -3,12 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 偷吃砂糖桔的博客
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: 偷吃砂糖桔
+language:
+- zh-CN
+- en
 timezone: ''
 
 # URL
