@@ -9,9 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: docker://pandoc/core:3.8
-        with:
-          args: "--help" # gets appended to pandoc command
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -23,6 +20,8 @@ jobs:
           # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
           # Ref: https://github.com/actions/setup-node#supported-version-syntax
           node-version: "22"
+      - name: Install Pandoc
+        uses: pandoc/actions/setup@v1
       - name: Cache NPM dependencies
         uses: actions/cache@v4
         with:
