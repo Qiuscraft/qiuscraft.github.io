@@ -1,6 +1,7 @@
 ---
 title: 【项目笔记】Restful API的设计
 date: 2025-03-02 21:30:00
+categories: 项目笔记
 ---
 
 **1. 可使用的 HTTP 动词：GET, POST, PUT, DELETE。**
