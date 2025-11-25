@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: docker://pandoc/core:3.8
+        with:
+          args: "--help" # gets appended to pandoc command
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -27,8 +30,6 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
-      - name: Install pandoc
-        run: apt install pandoc -y
       - name: Install Dependencies
         run: npm install
       - name: Build
